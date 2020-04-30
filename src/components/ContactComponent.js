@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem,
             Button, Form, FormGroup, Label, Input, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
+/**
+ * this code deals with the change in the event or element.
+ * Since we are adding the data iside the form input therefore its state is changes and then the 
+ * event change.therefore we are calling the onChange in the form.
+ */
 class Contact extends Component {
     constructor(props) {
         super(props);
@@ -21,7 +26,9 @@ class Contact extends Component {
         
     }
     handleInputChange(event) {
-        const target = event.target;
+        const target = event.target;/*Here the target is being found initially
+        after that the target is checked whether it is checkbox or normal target.the name is found out
+        as the state is a key value pair thats why it is updated.*/
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.name;
     
