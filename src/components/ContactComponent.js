@@ -48,9 +48,17 @@ class Contact extends Component {
         alert('Current State is: ' + JSON.stringify(this.state));
         event.preventDefault();
     }
+    /*
+    This is similar to handleBlur=function(field){
+        return function(evt){
+            ...
+        }
+    }
+    */
     handleBlur=(field)=>(evt)=>{
         this.setState({
-            touched:{...this.state.touched,[field]:true}
+            touched:{...this.state.touched,[field]:true}//... is basically the spread notation in this case
+            //it is same as this.state.touched.firstname,this.state.touched.lastname.
         });
     }
     validate(firstname,lastname,telnum,email){
