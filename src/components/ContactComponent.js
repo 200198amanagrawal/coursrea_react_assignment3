@@ -48,6 +48,13 @@ class Contact extends Component {
         alert('Current State is: ' + JSON.stringify(this.state));
         event.preventDefault();
     }
+    /*
+    This is similar to handleBlur=function(field){
+        return function(evt){
+            ...
+        }
+    }
+    */
     handleBlur=(field)=>(evt)=>{
         this.setState({
             touched:{...this.state.touched,[field]:true}
