@@ -57,7 +57,8 @@ class Contact extends Component {
     */
     handleBlur=(field)=>(evt)=>{
         this.setState({
-            touched:{...this.state.touched,[field]:true}
+            touched:{...this.state.touched,[field]:true}//... is basically the spread notation in this case
+            //it is same as this.state.touched.firstname,this.state.touched.lastname.
         });
     }
     validate(firstname,lastname,telnum,email){
