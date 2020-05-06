@@ -18,10 +18,7 @@ const mapStateToProps = (state) => {
 }
 class Main extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-  
+ 
 
 /**
  * This code is basically taking the App.js code into it and then will just pass itself into the App.js to 
